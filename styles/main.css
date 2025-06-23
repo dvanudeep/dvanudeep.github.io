@@ -747,27 +747,7 @@
 .datepicker.datepicker-primary table tr td.active[disabled] div,
 .datepicker.datepicker-primary table tr td.active:hover[disabled] div,
 .datepicker.datepicker-primary table tr td.active.disabled[disabled] div,
-.datepicker.datepicker-primary table tr td.active.disabled:hover[disabled] div,
-.datepicker.datepicker-primary table tr td span.active:hover,
-.datepicker.datepicker-primary table tr td span.active:hover:hover,
-.datepicker.datepicker-primary table tr td span.active.disabled:hover,
-.datepicker.datepicker-primary table tr td span.active.disabled:hover:hover,
-.datepicker.datepicker-primary table tr td span.active:active,
-.datepicker.datepicker-primary table tr td span.active:hover:active,
-.datepicker.datepicker-primary table tr td span.active.disabled:active,
-.datepicker.datepicker-primary table tr td span.active.disabled:hover:active,
-.datepicker.datepicker-primary table tr td span.active.active,
-.datepicker.datepicker-primary table tr td span.active:hover.active,
-.datepicker.datepicker-primary table tr td span.active.disabled.active,
-.datepicker.datepicker-primary table tr td span.active.disabled:hover.active,
-.datepicker.datepicker-primary table tr td span.active.disabled,
-.datepicker.datepicker-primary table tr td span.active:hover.disabled,
-.datepicker.datepicker-primary table tr td span.active.disabled.disabled,
-.datepicker.datepicker-primary table tr td span.active.disabled:hover.disabled,
-.datepicker.datepicker-primary table tr td span.active[disabled],
-.datepicker.datepicker-primary table tr td span.active:hover[disabled],
-.datepicker.datepicker-primary table tr td span.active.disabled[disabled],
-.datepicker.datepicker-primary table tr td span.active.disabled:hover[disabled] {
+.datepicker.datepicker-primary table tr td.active.disabled:hover[disabled] div {
   background-color: #FFFFFF;
 }
 
@@ -791,7 +771,7 @@
 .datepicker.datepicker-primary table tr td span.active:hover[disabled],
 .datepicker.datepicker-primary table tr td span.active.disabled[disabled],
 .datepicker.datepicker-primary table tr td span.active.disabled:hover[disabled] {
-  color: #378C3F;
+  background-color: #378C3F;
 }
 
 .datepicker-inline {
@@ -1931,7 +1911,7 @@ fieldset[disabled] .btn-neutral.active {
   background-color: transparent;
 }
 
-.btn-simple.disabled, .btn-simple.disabled:hover, .btn-simple.disabled:focus, .btn-simple.disabled.focus, .btn-simple.disabled:active, .btn-simple.disabled.active, .btn-simple:disabled, .btn-simple:disabled:hover, .btn-simple:disabled:focus, .btn-simple:disabled.focus, .btn-simple:disabled:active, .btn-simple:disabled.active, .btn-simple[disabled], .btn-simple[disabled]:hover, .btn-simple[disabled]:focus, .btn-simple[disabled].focus, .btn-simple[disabled]:active, .btn-simple[disabled].active,
+.btn-simple.disabled, .btn-simple.disabled:hover, .btn-simple.disabled:focus, .btn-simple.disabled.focus, .btn-simple.disabled:active, .btn-simple.disabled.active, .btn-simple:disabled, .btn.simple:disabled:hover, .btn.simple:disabled:focus, .btn.simple:disabled.focus, .btn.simple:disabled:active, .btn.simple:disabled.active, .btn-link.disabled, .btn-link.disabled:hover, .btn-link.disabled:focus, .btn-link.disabled.focus, .btn-link.disabled:active, .btn-link.disabled.active,
 fieldset[disabled] .btn-simple,
 fieldset[disabled] .btn-simple:hover,
 fieldset[disabled] .btn-simple:focus,
@@ -1944,12 +1924,6 @@ fieldset[disabled] .btn-simple.active,
 .btn-link.disabled.focus,
 .btn-link.disabled:active,
 .btn-link.disabled.active,
-.btn-link:disabled,
-.btn-link:disabled:hover,
-.btn-link:disabled:focus,
-.btn-link:disabled.focus,
-.btn-link:disabled:active,
-.btn-link:disabled.active,
 .btn-link[disabled],
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus,
@@ -2661,6 +2635,79 @@ textarea.form-control:focus, textarea.form-control:active {
 .progress-container.progress-danger .progress-badge {
   color: #FF3636;
 }
+
+/* Progress bar */
+
+.progress-container {
+  max-width: 400px;
+  font-family: sans-serif;
+}
+
+.progress-badge {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.progress-bar {
+  position: relative;
+  display: flex;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 4px;
+  border: 1px solid #ccc; /* Added border */
+}
+
+.segment {
+  height: 100%;
+  display: inline-block;
+  margin-right: 2px;
+  border-radius: 2px;
+}
+
+.easy {
+  background-color: #6FCF97;
+  width: 20%;
+}
+
+.medium {
+  background-color: #F2C94C;
+  width: 20%;
+}
+
+.hard {
+  background-color: #EB5757;
+  width: 60%;
+}
+
+  .progress-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 45%; /* Adjust as per skill level */
+    background-color: rgba(0, 0, 0, 0.547); /* Visible overlay */
+    z-index: 2;
+    border-radius: 6px 0 0 6px;
+    pointer-events: none;
+  }
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #333;
+  margin-top: 2px;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+
+
 
 /*           badges             */
 .badge {
@@ -3865,6 +3912,30 @@ img {
 
 .popover.popover-success.bs-popover-right .arrow:after {
   border-right-color: #18ce0f;
+}
+
+.popover.popover-success.bs-popover-top .arrow:after {
+  border-top-color: #18ce0f;
+}
+
+.popover.popover-success.bs-popover-bottom .arrow:after {
+  border-bottom-color: #18ce0f;
+}
+
+.popover.popover-success.bs-popover-left .arrow:after {
+  border-left-color: #18ce0f;
+}
+
+.popover.popover-success .popover-header {
+  color: #FFFFFF;
+  opacity: .6;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+  border-right-color: #FFFFFF;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
 }
 
 .popover.popover-success.bs-popover-top .arrow:after {
