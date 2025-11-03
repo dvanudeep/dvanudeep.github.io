@@ -7195,6 +7195,18 @@ Created using IcoMoon - icomoon.io
   }
 }
 
+.cc-profile-image {
+  margin-bottom: 5px !important;  /* reduce gap caused by image block */
+  padding-bottom: 0 !important;
+}
+
+.cc-profile-image a:before {
+  bottom: 0;       /* prevents extra space under the circle */
+  top: 0;          /* aligns it tightly */
+  margin: auto;    /* centers the ring without enlarging container */
+}
+
+
 .cc-profile-image a {
   position: relative;
 }
