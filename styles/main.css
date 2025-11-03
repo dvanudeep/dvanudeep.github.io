@@ -7196,7 +7196,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .cc-profile-image {
-  margin-bottom: 5px !important;  /* reduce gap caused by image block */
+  margin-bottom: 0px !important;  /* reduce gap caused by image block */
   padding-bottom: 0 !important;
 }
 
